@@ -1,17 +1,14 @@
 import React from 'react'
 import GenNavbar from '../components/GenNavbar'
 import QueryCardCollectionGen from '../components/QueryCardCollectionGen'
-import QUeryCollectionAdv from '../components/QUeryCollectionAdv'
 
-function TeacherQuery() {
+function StudentQuery() {
   return (
-    <div className='TeacherQuery'>
+    <div className='StudentQuery'>
       <GenNavbar />
       <QueryCardCollectionGen />
-      <hr></hr>
-      <QUeryCollectionAdv />
     </div>
   )
 }
 
-export default TeacherQuery
+export default StudentQuery
