@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /*background: black;*/
+    font-family: 'Outfit', sans-serif;
+    background: url(./background_image);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100wh;
+
+
+}
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+code{
+    font-family: source-code-pro, Menlo, Monaco;
+}
+
+.btn{
+    padding: 12px 32px ;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: #FFFF;
+    border: 1px solid #fff;
+    cursor: pointer;
+
+}
+
+.btn-light{
+    background: rgba(255, 255, 255, .2);
+}
+
