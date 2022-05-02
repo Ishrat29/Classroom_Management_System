@@ -6,8 +6,8 @@ function GenNavbar() {
 
   return (
     <>
-        <nav className='navbar'>
-            <div className='navbar-container'>
+        <nav className='navbar py-0'>
+            <div className='navbar-container' >
                 <img src='/images/sust-logo.png' alt='' className='navbar-Logo'></img>
                 <div className='menu-icon' onClick = {() => setClick(!click)}>
                     <i className= {click ? 'fas fa-times' : 'fas fa-bars'}></i>
