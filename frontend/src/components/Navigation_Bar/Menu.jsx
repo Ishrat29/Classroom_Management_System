@@ -13,17 +13,17 @@ function Menu() {
                 <div className='nav-brand'>
                 <Navbar.Brand style={{color:'#535c68'}}>Classroom Database Management System</Navbar.Brand> </div>
                 
-                {/* <div className='menu-icon' onClick = {() => setClick(!click)}>
+                <div className='menu-icon' onClick = {() => setClick(!click)}>
                     <i className= {click ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item mt-2'>
                         Sign Up
-                    </li>
+                    </li> 
                     <li className='nav-item mt-2'>
                         Login
                     </li>
-                </ul>*/}
+                 </ul> 
             </div> 
         </nav>
     </>
