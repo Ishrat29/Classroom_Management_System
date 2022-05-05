@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import loginImg from '../images/Login.png'
+import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
 import './Login.css'
 
