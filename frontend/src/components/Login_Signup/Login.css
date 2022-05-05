@@ -30,21 +30,43 @@ body{
 
 }
 
-.btn1{
+.login{
     border: none;
     outline: none;
-    height: 50px;
+    height: 45px;
     width: 100%;
-    background-color: black;
+    background-color: #10ac84;
     color: aliceblue;
     border-radius: 4px;
     font-weight: bold;
 }
 
-.btn1:hover{
+.signup{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    background-color: #10ac84;
+    color: aliceblue;
+    border-radius: 4px;
+    font-weight: bold;
+} 
+
+.login:hover{
     background: white;
     border: 1px solid;
-    color: black;
+    color: #55efc4;
 }
 
+.signup:hover{
+    background: white;
+    border: 1px solid;
+    color: #55efc4;
+}
+
+.header{
+    text-align: center;
+    color: #c8d6e5;
+    text-shadow: #55efc4;
+}
 
