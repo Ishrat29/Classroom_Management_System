@@ -1,5 +1,5 @@
 import React from 'react'
-import GenNavbar from '../components/GenNavbar'
+import GenNavbar from '../components/Navigation_Bar/GenNavbar'
 import QueryCardCollectionGen from '../components/QueryCardCollectionGen'
 import QUeryCollectionAdv from '../components/QUeryCollectionAdv'
 

@@ -1,6 +1,6 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
+  background: linear-gradient(90deg, rgb(192, 189, 189) 0%, rgb(197, 192, 192) 100%);
+  height: 50px;
   display: flex;
   align-items: center;
   font-size: 1.4rem;
@@ -15,14 +15,14 @@
 .navbar-container {
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 50px;
   width: 100%;
   padding-left: 30px;
 }
 
 img {
-  max-height: 80px;
-  background-color: #fff;
+  max-height: 50px;
+  /* background-color: #fff; */
 }
 
 .fa-typo3 {
@@ -43,10 +43,11 @@ img {
 
 .nav-item {
   height: 100%;
-  color: #fff;
+  color: #535c68;
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: large;
   padding: 0.3rem 0.5rem;
 }
 
@@ -99,19 +100,6 @@ img {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
-    align-items: center;
-  }
-
-  .nav-item {
-    height: 100%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.3rem 0.5rem;
-    width: 100%;
-    margin-right: 4.5rem;
   }
 
   .nav-links {
@@ -121,7 +109,7 @@ img {
     display: table;
   }
 
-  .nav-links:hover, .nav-item:hover {
+  .nav-links:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
@@ -169,4 +157,6 @@ img {
     color: #242424;
     transition: 250ms;
   }
+
+ 
 }
