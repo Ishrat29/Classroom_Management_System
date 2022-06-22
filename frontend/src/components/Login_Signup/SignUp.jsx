@@ -4,8 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
 import './Login.css'
+import { useNavigate } from 'react-router-dom'
 
  const SignUp = () => {
+
+  const navigate = useNavigate();
+ 
    return (
     <>
   
@@ -69,13 +73,21 @@ import './Login.css'
                     
                      <button 
                      type='button' 
-                     className='signup mt-3 mb-5'>
+                     className='signup mt-3 mb-5'
+                     onClick={()=>{navigate("/TeacherQuery");}}
+                     >
                        SIGN UP
                        </button> 
 
                        <p 
                 style={{color:'#0abde3'}}>
-                  Already have an account? Login Now.. 
+                  Already have an account?
+                  <a 
+                     style={{color:'#54a0ff'}} 
+                     href='#'
+                     onClick={()=>{navigate("/");}}>
+                       Login Now..
+                      </a>  
                     </p>   
                    
                </Form> 

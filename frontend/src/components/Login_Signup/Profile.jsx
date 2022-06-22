@@ -2,25 +2,23 @@ import React from 'react'
 import {  Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
-import Menu from '../Navigation_Bar/Menu';
+import GenNavbar from '../Navigation_Bar/GenNavbar';
 import './Login.css'
-import { useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 
 
- const Login = () => {
+ const Profile = () => {
   
-  const navigate = useNavigate();
- 
 
    return (
     <>
   
-      <title>Login page</title>
+      <title>Profile page</title>
           <head></head>
              <body>
                  <div>
-                 <Menu/>
+                 <GenNavbar/>
                  
                    <div 
                    className="container my-4 mx-5 " 
@@ -36,53 +34,48 @@ import { useNavigate } from 'react-router-dom'
                   alt='icon'
                  />
                  </div>
-                    <h4 className='header'>
-                      Login to your account
-                      </h4> 
+                 <h3 className='header'>
+                     User Profile
+                      </h3> 
                      <Form>
                      
                      <input 
-                     type='email' 
-                     placeholder= 'Email-address'
+                     type='Name' 
+                     placeholder= 'Name'
                      className='form-control my-3 p-3'>
                        </input> 
+
+                       <input 
+                     type='Dept' 
+                     placeholder= 'Dept'
+                     className='form-control my-3 p-3'>
+                       </input>    
                     
                      <input 
-                     type='password' 
-                     placeholder= 'password' 
+                     type='Reg-No' 
+                     placeholder= 'Reg-No' 
                      className='form-control my-3 p-3'>
                        </input> 
+
+                       <input 
+                     type='Session' 
+                     placeholder= 'Session'
+                     className='form-control my-3 p-3'>
+                       </input>  
+
+                        <input 
+                     type='Email-address' 
+                     placeholder= 'Email-address' 
+                     className='form-control my-3 p-3'>
+                       </input>  
                     
                      <button 
                      type='button' 
                      className='login mt-3 mb-5'
-                     onClick={()=>{navigate("/TeacherQuery");}}
                      >
-                       LOGIN
+                       Edit Profile 
                        </button> 
                      
-                       <p 
-                style={{color:'#0abde3'}}>
-                  Don't Have an Acount?
-                  </p> 
-                     <a 
-                     style={{color:'#54a0ff'}} 
-                     href='#'
-                     onClick={()=>{navigate("/SignUp");}}>
-                       Sign Up First..
-                      </a> 
-               {/*   <p 
-                style={{color:'#0abde3'}}
-                onClick={()=>{setGoToHome(true);}}
-                >
-                  Sign Up First.. 
-                  {/* <a 
-                  style={{color:'#54a0ff'}} 
-                  href='./SignUp.jsx'>
-                    Register Here
-                    </a> 
-                    
-                    </p>  */}
                </Form> 
 
            </div>
@@ -94,6 +87,6 @@ import { useNavigate } from 'react-router-dom'
    )
  }
 
-export default Login
+export default Profile
 
 
