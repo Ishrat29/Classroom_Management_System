@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
 import { Navbar } from 'react-bootstrap';
 import './GenNavbar.css';
+import { useNavigate } from 'react-router-dom'
 
 function Menu() {
    const [click, setClick] = useState(false);
-
+   const navigate = useNavigate();
   return (
     <>
         <nav className='navbar py-0'>
@@ -17,10 +18,12 @@ function Menu() {
                     <i className= {click ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className='nav-item mt-2'>
+                    <li className='nav-item mt-2'
+                    onClick={()=>{navigate("/SignUp");}}>
                         Sign Up
                     </li> 
-                    <li className='nav-item mt-2'>
+                    <li className='nav-item mt-2'
+                    onClick={()=>{navigate("/");}}>
                         Login
                     </li>
                  </ul> 
