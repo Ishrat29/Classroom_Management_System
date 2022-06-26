@@ -7,6 +7,8 @@ import AddEditStudent from './pages/AddEditStudent';
 import TeacherQuery from './pages/TeacherQuery';
 import StudentQuery from './pages/StudentQuery';
 import Profile from './components/Login_Signup/Profile';
+import CourseQuery from './pages/CourseQuery';
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
     <Route path='/StudentQuery' element={<StudentQuery/>} />
     <Route path='/TeacherQuery' element={<TeacherQuery/>} />
     <Route path='/Profile' element={<Profile/>} />
+    <Route path='/CourseQuery' element={<CourseQuery/>} />
 
 </Routes>
 </Router>

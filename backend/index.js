@@ -35,6 +35,7 @@ app.post("/studentinfo", (req, res) => {
     );
   });
 
+
 app.post("/deptinfo", (req, res) => {
   const departmentcode = req.body.departmentcode;
   console.log("{ department code: "+departmentcode+" }");
@@ -112,7 +113,3 @@ app.put("/updatestu", (req, res) => {
     }
   );
 });
-
-//router to teacher.js
-const teacherRouter = require('./routes/teacher');
-app.use('/teacher', teacherRouter);
