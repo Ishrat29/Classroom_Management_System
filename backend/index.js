@@ -112,3 +112,7 @@ app.put("/updatestu", (req, res) => {
     }
   );
 });
+
+//router to teacher.js
+const teacherRouter = require('./routes/teacher');
+app.use('/teacher', teacherRouter);

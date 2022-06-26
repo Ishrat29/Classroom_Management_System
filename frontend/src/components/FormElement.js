@@ -3,7 +3,7 @@ import './formElement.css'
 
 function FormElement(props) {
 
-    //default state is 0, invalid 1, valid 2
+    //default state is 0, invalid 1, valid 2, valid with message 4
     const getClassOnvalidState = () => {
         if(props.validState===0) return "form-control";
         if(props.validState===1) return "form-control-invalid";
@@ -12,9 +12,9 @@ function FormElement(props) {
     };
 
     const getClassnameErrMessage = ()=>{
-      if(props.validState===1) return "invalid-feedback";
       if(props.validState===4) return "feedback-message";
-      return "valid-feedback";
+      if(props.validState===1) return "feedback-message-invalid";
+      else return "valid-feedback";
     };
 
   return (

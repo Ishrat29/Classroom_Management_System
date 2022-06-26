@@ -3,7 +3,7 @@ import FormElement from '../components/FormElement'
 import './addEditStudent.css'
 import Axios from 'axios'
 import { GenButton } from '../components/GenButton';
-import GenNavbar from '../components/GenNavbar'
+import GenNavbar from '../components/commonNav/CommonNavbar'
 
 function AddEditStudent() {
 

@@ -71,16 +71,16 @@ input {
     display: none;
 }
 
-.invalid-feedback {
-    width: 100%;
-    margin-top: 0.25rem;
-    font-size: .875em;
-    color: #dc3545;
-}
-
 .feedback-message {
     width: 100%;
     margin-top: 0.25rem;
     font-size: .875em;
     color: #198754;
+}
+
+.feedback-message-invalid {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
 }
