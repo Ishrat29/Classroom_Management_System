@@ -25,7 +25,7 @@ function AddEditTeacher() {
         setIsValidMail(1);
         return;
       }
-      if(mailString.substring(length-9,length).localeCompare('@sust.edu')!=0){
+      if(mailString.substring(length-9,length).localeCompare('@sust.edu')!==0){
         //console.log("last part: "+mailString.substring(length-9,length));
         setInvalidMailMessage('Entered E-mail is not in correct format. Ex: dummy123@sust.edu');
         setIsValidMail(1);

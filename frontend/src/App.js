@@ -12,6 +12,7 @@ import AddEditCourse from './pages/AddEditCourse';
 
 
 
+
 function App() {
   return (
     <>
@@ -19,21 +20,18 @@ function App() {
    <Router>
   <Routes>
     <Route path='/' element={<Login/>} />
-    <Route path='/AddEditStudent' element={<AddEditStudent/>} />
     <Route path='/SignUp' element={<SignUp/>} />
+    <Route path='/Profile' element={<Profile/>} />
     <Route path='/StudentQuery' element={<StudentQuery/>} />
     <Route path='/TeacherQuery' element={<TeacherQuery/>} />
-    <Route path='/Profile' element={<Profile/>} />
+    <Route path='/AddEditStudent' element={<AddEditStudent/>} />
     <Route path='/AddEditTeacher' element={<AddEditTeacher/>} />
     <Route path='/AddEditCourse' element={<AddEditCourse/>} />
+   
 
 </Routes>
 </Router>
-{/* <div>
-     {/* <Login/> */}
-      {/* <SignUp/>  */}
-    {/*  <AddEditStudent/> */}
-    {/* </div> */}
+
       </>
   );
 }

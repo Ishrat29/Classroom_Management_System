@@ -1,12 +1,10 @@
 import React from 'react'
 import QueryCard from './QueryCard'
-import { useNavigate } from 'react-router-dom'
 import './QueryCardCollectionGen.css'
 
 
 function QUeryCollectionAdv() {
  
-  const navigate = useNavigate();
 
 
   return (
@@ -16,26 +14,26 @@ function QUeryCollectionAdv() {
           <div className='cards__wrapper'>
             <ul className='cards__items'>
                
-            <div onClick={()=>{navigate("/AddEditCourse");}}>
+           
               <QueryCard hoverable
                 src='images/add-edit-course.png'
                 text = 'Add Or Edit A Course'
-                label = 'Add/Edit Course'
+                label = 'Click Here'
                 onClick="console.log('The link was clicked.')"
+                path ='/AddEditCourse'
                 />
-               </div>
-               <div onClick={()=>{navigate("/AddEditTeacher");}}>
+              
               <QueryCard src='images/add-edit-teacher.png '
                 text = "Add Or Edit A Teacher's Information"
-                label = "Add/Edit Teacher"
+                label = "Click Here"
+                path='/AddEditTeacher'
                 />
-                </div>
-                <div onClick={()=>{navigate("/AddEditStudent");}}>
+               
               <QueryCard src='images/add-edit-student.png'
                 text = "Add Or Edit A Student's Information"
-                 label = "Add/Edit Student"
+                 label = "Click Here"
+                 path='/AddEditStudent'
                 />
-              </div>
             </ul>
           </div>
         </div>
