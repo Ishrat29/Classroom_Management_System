@@ -272,7 +272,7 @@ function AddEditTeacher() {
                         </div>
                         <div className='b-div'>{/*edit starts here*/}
                           <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
-                            {isValidReg===4?"Update Student Info":"Add Student Info"}
+                            {isValidMail===4?"Update Teacher Info":"Add Teacher Info"}
                           </GenButton>
                           <div className={btnErrClassName}>
                             {btnErrMessage}
