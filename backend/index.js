@@ -36,6 +36,24 @@ app.post("/studentinfo", (req, res) => {
   });
 
 
+  app.post("/courseinfo", (req, res) => {
+    const courseCode = req.body.courseCode;
+    console.log(courseCode);
+  
+    db.query(
+      "SELECT * FROM course WHERE course_code = ?",
+      [courseCode],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send(result);
+        }
+      }
+    );
+  });
+
+
 app.post("/deptinfo", (req, res) => {
   const departmentcode = req.body.departmentcode;
   console.log("{ department code: "+departmentcode+" }");
@@ -113,3 +131,13 @@ app.put("/updatestu", (req, res) => {
     }
   );
 });
+
+
+
+//router to teacher.js
+const teacherRouter = require('./routes/teacher');
+app.use('/teacher', teacherRouter);
+
+//router to teacher.js
+const courseRouter = require('./routes/Course');
+app.use('/Course', courseRouter);

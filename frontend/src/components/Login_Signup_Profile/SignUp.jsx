@@ -3,7 +3,7 @@ import {  Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
-import './Login.css'
+import './Login_SignUp_Profile.css'
 import { useNavigate } from 'react-router-dom'
 
  const SignUp = () => {

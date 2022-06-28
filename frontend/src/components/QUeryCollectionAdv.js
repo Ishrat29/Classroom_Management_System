@@ -16,7 +16,7 @@ function QUeryCollectionAdv() {
           <div className='cards__wrapper'>
             <ul className='cards__items'>
                
-            <div onClick={()=>{navigate("/");}}>
+            <div onClick={()=>{navigate("/AddEditCourse");}}>
               <QueryCard hoverable
                 src='images/add-edit-course.png'
                 text = 'Add Or Edit A Course'
@@ -24,13 +24,13 @@ function QUeryCollectionAdv() {
                 onClick="console.log('The link was clicked.')"
                 />
                </div>
-               <div onClick={()=>{navigate("/");}}>
+               <div onClick={()=>{navigate("/AddEditTeacher");}}>
               <QueryCard src='images/add-edit-teacher.png '
                 text = "Add Or Edit A Teacher's Information"
                 label = "Add/Edit Teacher"
                 />
                 </div>
-                <div onClick={()=>{navigate("/");}}>
+                <div onClick={()=>{navigate("/AddEditStudent");}}>
               <QueryCard src='images/add-edit-student.png'
                 text = "Add Or Edit A Student's Information"
                  label = "Add/Edit Student"

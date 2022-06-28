@@ -6,7 +6,7 @@ import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './Login.css'
+import './Login_SignUp_Profile.css'
 
 
 

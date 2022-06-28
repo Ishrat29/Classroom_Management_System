@@ -3,7 +3,7 @@ import {  Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
 import GenNavbar from '../Navigation_Bar/GenNavbar';
-import './Login.css'
+import './Login_SignUp_Profile.css'
 import { Navigate } from 'react-router-dom'
 const imageMimeType = /image\/(png|jpg|jpeg)/i;
 

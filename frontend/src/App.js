@@ -1,13 +1,15 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Login from './components/Login_Signup/Login';
-import SignUp from './components/Login_Signup/SignUp';
+import Login from './components/Login_Signup_Profile/Login';
+import SignUp from './components/Login_Signup_Profile/SignUp';
 import Course from './components/Info/Course';
 import AddEditStudent from './pages/AddEditStudent';
 import TeacherQuery from './pages/TeacherQuery';
 import StudentQuery from './pages/StudentQuery';
-import Profile from './components/Login_Signup/Profile';
-import CourseQuery from './pages/CourseQuery';
+import Profile from './components/Login_Signup_Profile/Profile';
+import AddEditTeacher from './pages/AddEditTeacher';
+import AddEditCourse from './pages/AddEditCourse';
+
 
 
 function App() {
@@ -22,7 +24,8 @@ function App() {
     <Route path='/StudentQuery' element={<StudentQuery/>} />
     <Route path='/TeacherQuery' element={<TeacherQuery/>} />
     <Route path='/Profile' element={<Profile/>} />
-    <Route path='/CourseQuery' element={<CourseQuery/>} />
+    <Route path='/AddEditTeacher' element={<AddEditTeacher/>} />
+    <Route path='/AddEditCourse' element={<AddEditCourse/>} />
 
 </Routes>
 </Router>
