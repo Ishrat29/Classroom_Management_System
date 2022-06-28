@@ -43,6 +43,11 @@ function AddEditStudent() {
         setInvalidMessage("Student Exists in the Database");
         setIsValidReg(4);
         setStudent(response.data[0]);
+
+        //assigning to corresponding values of Form elements
+        setName(response.data[0].name);
+        setSession(response.data[0].session);
+        setDept(response.data[0].department);
       }
     });
   };
@@ -221,6 +226,7 @@ function AddEditStudent() {
       });
     }else{
       if(editAfterFoundref===1&&isValidDept===4&&isValidName===2&&isValidReg===2&&isValidSession===2){
+        console.log("updated with value "+name+" "+session+" "+dept+" ");
         Axios.post("http://localhost:3001/createstu", {
               reg: regNo,
               name: name,
@@ -234,6 +240,7 @@ function AddEditStudent() {
               }
             });
       }else if(editAfterFoundref===1&&isValidReg===4&&(isValidDept===4|isValidDept===0)&&(isValidName===2||isValidName===0)&&(isValidSession===2||isValidSession===0)){
+        console.log("updated with value "+name+" "+session+" "+dept+" ");
         Axios.put("http://localhost:3001/updatestu", {
           reg: regNo,
           name: name,
@@ -248,6 +255,7 @@ function AddEditStudent() {
         });
       }
     }
+    console.log("button funtion ended value "+name+" "+session+" "+dept+" ");
   };
 
   return (
@@ -271,14 +279,16 @@ function AddEditStudent() {
                   <FormElement labelName="Department Building" validState={isValidDeptB} invalidMessage={invalidMessageDeptB} inputType="Text" onChangeFunc={onDeptBChange}
                   text={""}/>
                 </div>
-                <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
-                  {isValidReg===4?"Update Student Info":"Add Student Info"}
-                </GenButton>
+                <div className='b-div'>{/*edit starts here*/}
+                  <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
+                    {isValidReg===4?"Update Student Info":"Add Student Info"}
+                  </GenButton>
+                  <div className={btnErrClassName}>
+                    {btnErrMessage}
+                  </div>
+                </div>{/*edit ends here*/}
               </div> 
             </form>
-            <div className={btnErrClassName}>
-              {btnErrMessage}
-            </div>
           </div>
         </div>
     </>

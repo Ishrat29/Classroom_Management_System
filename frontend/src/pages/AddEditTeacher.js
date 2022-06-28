@@ -50,6 +50,11 @@ function AddEditTeacher() {
           setInvalidMailMessage("Teacher Exists in the Database");
           setIsValidMail(4);
           setTeacher(response.data[0]);
+
+          //setting all for state values
+          setName(response.data[0].name);
+          setMobile(response.data[0].mobile);
+          setDept(response.data[0].department);
         }
       });
     };
@@ -265,14 +270,16 @@ function AddEditTeacher() {
                             <FormElement labelName="Department Building" validState={isValidDeptB} invalidMessage={invalidMessageDeptB} inputType="Text" onChangeFunc={onDeptBChange}
                             text={""}/>
                         </div>
-                        <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
-                            {isValidMail===4?"Update Teacher Info":"Add Teacher Info"}
-                        </GenButton>
+                        <div className='b-div'>{/*edit starts here*/}
+                          <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
+                            {isValidReg===4?"Update Student Info":"Add Student Info"}
+                          </GenButton>
+                          <div className={btnErrClassName}>
+                            {btnErrMessage}
+                          </div>
+                        </div>
                     </div> 
                 </form>
-                <div className={btnErrClassName}>
-                    {btnErrMessage}
-                </div>
             </div>
         </div>
     </>
