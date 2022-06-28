@@ -31,7 +31,6 @@
     flex: 1;
     margin: 0 1rem;
     border-radius: 10px;
-
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -43,7 +42,7 @@
     text-decoration: none;
   }
   
-  .cards__item__link {
+  /* .cards__item__link {
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -53,7 +52,7 @@
     border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
-  }
+  } */
   
   .cards__item__pic-wrap {
     position: relative;
@@ -76,10 +75,11 @@
     max-width: calc((100%) - 60px);
     font-size: 12px;
     font-weight: 700;
-    color: #fff;
-    background-color: #1f98f4;
+    color: rgb(169, 200, 233);
     box-sizing: border-box;
     justify-self: center;
+    text-decoration: none; 
+    /* color: 'white'; */
   }
   
   .cards__item__img {
@@ -140,4 +140,5 @@
       padding-top: 65%;
       overflow: hidden;
     }
+
   }

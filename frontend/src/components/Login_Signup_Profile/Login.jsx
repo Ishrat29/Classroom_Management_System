@@ -1,21 +1,26 @@
 import React from 'react'
 import {  Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
-import './Login.css'
-import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Login_SignUp_Profile.css'
 
 
 
+//toast.configure()
  const Login = () => {
-  
-  const navigate = useNavigate();
  
-
+  const navigate = useNavigate();
+  // const notify = () => {
+  //   toast('Login Completed!')
+  // }
+ 
    return (
     <>
-  
+   
       <title>Login page</title>
           <head></head>
              <body>
@@ -56,14 +61,19 @@ import { useNavigate } from 'react-router-dom'
                      <button 
                      type='button' 
                      className='login mt-3 mb-5'
-                     onClick={()=>{navigate("/TeacherQuery");}}
+                     onClick={()=>{navigate("/TeacherQuery"); }}
                      >
                        LOGIN
-                       </button> 
+                       </button>
+                       {/* if(Login completed)
+                       toast.success("Login Completed");
+                       else
+                       toast.error("Something went wrong"); */}
                      
+                       
                        <p 
                 style={{color:'#0abde3'}}>
-                  Don't Have an Acount?
+                  Don't Have an Acount? 
                   </p> 
                      <a 
                      style={{color:'#54a0ff'}} 
@@ -71,18 +81,6 @@ import { useNavigate } from 'react-router-dom'
                      onClick={()=>{navigate("/SignUp");}}>
                        Sign Up First..
                       </a> 
-               {/*   <p 
-                style={{color:'#0abde3'}}
-                onClick={()=>{setGoToHome(true);}}
-                >
-                  Sign Up First.. 
-                  {/* <a 
-                  style={{color:'#54a0ff'}} 
-                  href='./SignUp.jsx'>
-                    Register Here
-                    </a> 
-                    
-                    </p>  */}
                </Form> 
 
            </div>

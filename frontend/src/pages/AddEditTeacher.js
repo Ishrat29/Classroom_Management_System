@@ -3,7 +3,7 @@ import FormElement from '../components/FormElement'
 import './addEditTeacher.css'
 import Axios from 'axios'
 import { GenButton } from '../components/GenButton';
-import GenNavbar from '../components/commonNav/CommonNavbar'
+import GenNavbar from '../components/Navigation_Bar/GenNavbar';
 
 function AddEditTeacher() {
 
@@ -21,11 +21,11 @@ function AddEditTeacher() {
       console.log("emailString: "+mailString+", Curently stored value:"+mail);
   
       if(length<=9){
-        setInvalidMailMessage('Registration Number must be of atleast 10 letters. Ex: dummy123@sust.edu');
+        setInvalidMailMessage('Email must be of this fromat. Ex: dummy123@sust.edu');
         setIsValidMail(1);
         return;
       }
-      if(mailString.substring(length-9,length).localeCompare('@sust.edu')!=0){
+      if(mailString.substring(length-9,length).localeCompare('@sust.edu')!==0){
         //console.log("last part: "+mailString.substring(length-9,length));
         setInvalidMailMessage('Entered E-mail is not in correct format. Ex: dummy123@sust.edu');
         setIsValidMail(1);
@@ -262,7 +262,7 @@ function AddEditTeacher() {
                         text={isValidMail===4?teacher.name:""}/>
                         <FormElement labelName="Mobile Number" validState={isValidMobile} invalidMessage={invalidMessageMobile} inputType="number" onChangeFunc={onMobileChange}
                         text={isValidMail===4?teacher.mobile:""}/>
-                        <FormElement labelName="Student Department Code" validState={isValidDept} invalidMessage={invalidMessageDept} inputType="number" onChangeFunc={onDeptChange}
+                        <FormElement labelName="Teacher's Department Code" validState={isValidDept} invalidMessage={invalidMessageDept} inputType="number" onChangeFunc={onDeptChange}
                         text={isValidMail===4?teacher.department:""}/>
                         <div className={(isValidDept===4 || isValidDept===0 || isValidDept===1)?'deptdetail-non':"deptdetail"}>
                             <FormElement labelName="Department Name" validState={isValidDeptName} invalidMessage={invalidMessageDeptN} inputType="Text" onChangeFunc={onDeptNameChange}

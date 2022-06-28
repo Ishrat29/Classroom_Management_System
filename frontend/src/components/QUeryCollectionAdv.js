@@ -4,6 +4,7 @@ import './QueryCardCollectionGen.css'
 
 
 function QUeryCollectionAdv() {
+ 
 
 
   return (
@@ -12,17 +13,26 @@ function QUeryCollectionAdv() {
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
-              <QueryCard src='images/add-edit-course.png'
+               
+           
+              <QueryCard hoverable
+                src='images/add-edit-course.png'
                 text = 'Add Or Edit A Course'
-                label = 'Add/Edit Course'
+                label = 'Click Here'
+                onClick="console.log('The link was clicked.')"
+                path ='/AddEditCourse'
                 />
+              
               <QueryCard src='images/add-edit-teacher.png '
                 text = "Add Or Edit A Teacher's Information"
-                label = "Add/Edit Teacher"
+                label = "Click Here"
+                path='/AddEditTeacher'
                 />
+               
               <QueryCard src='images/add-edit-student.png'
                 text = "Add Or Edit A Student's Information"
-                label = "Add/Edit Student"
+                 label = "Click Here"
+                 path='/AddEditStudent'
                 />
             </ul>
           </div>
