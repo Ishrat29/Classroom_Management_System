@@ -188,7 +188,7 @@ function AddEditStudent() {
         deptbuilding: DeptB,
       }).then((response) => {
         if(response.data.err===0){
-          setBtnErrMessage("Updated Department Info");
+          setBtnErrMessage("Updated!");
           setBtnErrClassName("feedback-btn-err-message");
           if(isValidReg===2&&isValidDept===2&&isValidName===2&&isValidReg===2&&isValidSession===2){
             Axios.post("http://localhost:3001/createstu", {
@@ -198,7 +198,7 @@ function AddEditStudent() {
               department: dept,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Department And Student Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -211,7 +211,7 @@ function AddEditStudent() {
               department: dept,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Department And Student Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -219,7 +219,7 @@ function AddEditStudent() {
           }
         }else{
           setBtnErrClassName("invalid-btn-err");
-          setBtnErrMessage("Could not update department and student Info")
+          setBtnErrMessage("Failed!")
           return;
         }
 
@@ -234,7 +234,7 @@ function AddEditStudent() {
               department: dept,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Student Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -248,7 +248,7 @@ function AddEditStudent() {
           department: dept,
         }).then((response) => {
           if(response.data.err===0){
-            setBtnErrMessage("Updated Student Info");
+            setBtnErrMessage("Updated!");
             setBtnErrClassName("feedback-btn-err-message");
       
           }

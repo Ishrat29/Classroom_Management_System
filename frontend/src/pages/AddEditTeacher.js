@@ -192,7 +192,7 @@ function AddEditTeacher() {
                 department: dept,
               }).then((response) => {
                 if(response.data.err===0){
-                  setBtnErrMessage("Updated Department And Teacher Info");
+                  setBtnErrMessage("Updated!");
                   setBtnErrClassName("feedback-btn-err-message");
             
                 }
@@ -205,7 +205,7 @@ function AddEditTeacher() {
                 department: dept,
               }).then((response) => {
                 if(response.data.err===0){
-                  setBtnErrMessage("Updated Department And Teacher Info");
+                  setBtnErrMessage("Updated!");
                   setBtnErrClassName("feedback-btn-err-message");
             
                 }
@@ -213,7 +213,7 @@ function AddEditTeacher() {
             }
           }else{
             setBtnErrClassName("invalid-btn-err");
-            setBtnErrMessage("Could not update department and Teacher Info")
+            setBtnErrMessage("Failed!")
             return;
           }
   
@@ -227,7 +227,7 @@ function AddEditTeacher() {
                 department: dept,
               }).then((response) => {
                 if(response.data.err===0){
-                  setBtnErrMessage("Updated Teacher Info");
+                  setBtnErrMessage("Updated!");
                   setBtnErrClassName("feedback-btn-err-message");
             
                 }
@@ -240,7 +240,7 @@ function AddEditTeacher() {
             department: dept,
           }).then((response) => {
             if(response.data.err===0){
-              setBtnErrMessage("Updated Teacher Info");
+              setBtnErrMessage("Updated!");
               setBtnErrClassName("feedback-btn-err-message");
         
             }
