@@ -1,0 +1,80 @@
+@media (min-width: 992px){
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+}
+
+@media (min-width: 768px){
+    .col-md-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+}
+
+.mb-3 {
+    margin-bottom: 1rem!important;
+    color: #10ac84;
+    padding-left: 7px;
+}
+
+    .h4, h4 {
+        font-size: 2rem;
+    }
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.course-info-fetch-non{
+    display: none;
+}
+
+.deptdetail-non{
+    display: none;
+}
+
+.valid-btn-err {
+    display: none;
+}
+
+.invalid-btn-err {
+    width: fit-content;
+    height: 35px;
+    margin-top: 0.25rem;
+    font-size: 30px;
+    color: #dc3545;
+}
+
+.feedback-btn-err-message {
+    width: fit-content;
+    height: 35px;
+    margin-top: 0.25rem;
+    font-size: 30px;
+    color: #10ac84;
+    align-items: center;
+    
+}
+
+.page-wrap{
+    justify-content: center;
+    padding-left: 40px;
+}
+
+@media screen and (max-width: 760px) {
+    .page-wrap{
+        justify-content: center;
+        padding-left: 10px;
+    }
+}
+
+.b-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+}
