@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {  Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +7,7 @@ import Menu from '../Navigation_Bar/Menu';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login_SignUp_Profile.css'
+import Axios from 'axios'
 
 
 
@@ -17,6 +18,29 @@ import './Login_SignUp_Profile.css'
   // const notify = () => {
   //   toast('Login Completed!')
   // }
+
+  const [userPass_login, setUserPass_login] = useState('')
+  const [userMail_login, setUserMail_login] = useState('')
+  const [loginStatus, setLoginStatus] = useState('')
+
+  const login = () => {
+    Axios.post("http://localhost:3001/fetch_userinfo", {
+      userPass_login: userPass_login,
+      userMail_login: userMail_login,
+    }).then((response) => {
+      if(response.data.message){
+      console.log('failed');
+      }
+      else{
+        console.log('success');
+      }
+    });
+  };
+
+  const button = () =>{
+    login()
+   navigate("/TeacherQuery")
+  }
  
    return (
     <>
@@ -49,19 +73,27 @@ import './Login_SignUp_Profile.css'
                      <input 
                      type='email' 
                      placeholder= 'Email-address'
-                     className='form-control my-3 p-3'>
+                     className='form-control my-3 p-3'
+                     onChange={(e) => {
+                      setUserMail_login(e.target.value);
+                    }}
+                     >
                        </input> 
                     
                      <input 
                      type='password' 
                      placeholder= 'password' 
-                     className='form-control my-3 p-3'>
+                     className='form-control my-3 p-3'
+                     onChange={(e) => {
+                      setUserPass_login(e.target.value);
+                    }}
+                     >
                        </input> 
                     
                      <button 
                      type='button' 
                      className='login mt-3 mb-5'
-                     onClick={()=>{navigate("/TeacherQuery"); }}
+                     onClick={button}
                      >
                        LOGIN
                        </button>
@@ -69,7 +101,7 @@ import './Login_SignUp_Profile.css'
                        toast.success("Login Completed");
                        else
                        toast.error("Something went wrong"); */}
-                     
+                     <h1>{loginStatus}</h1>
                        
                        <p 
                 style={{color:'#0abde3'}}>

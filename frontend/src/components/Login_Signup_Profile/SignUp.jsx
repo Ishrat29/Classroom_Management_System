@@ -1,19 +1,42 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {  Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import loginImg from '../images/login.png'
 import Menu from '../Navigation_Bar/Menu';
 import './Login_SignUp_Profile.css'
-import { useNavigate } from 'react-router-dom'
+import Axios from 'axios'
 
  const SignUp = () => {
 
   const navigate = useNavigate();
+
+  const [userName_signUp, setUserName_signUp] = useState('')
+  const [userDept_signUp, setUserDept_signUp] = useState('')
+  const [userPass_signUp, setUserPass_signUp] = useState('')
+  const [userMail_signUp, setUserMail_signUp] = useState('')
+
+  const signUp = () => {
+    Axios.post("http://localhost:3001/userinfo", {
+      userName_signUp: userName_signUp,
+      userDept_signUp: userDept_signUp,
+      userPass_signUp: userPass_signUp,
+      userMail_signUp: userMail_signUp,
+    }).then((response) => {
+      console.log(response);
+    });
+  };
+
+  const button = () =>{
+    signUp()
+    navigate("/TeacherQuery")
+  }
+
  
    return (
     <>
   
-      <title>Login page</title>
+      <title> page</title>
           <head></head>
              <body>
                  <div>
@@ -44,37 +67,50 @@ import { useNavigate } from 'react-router-dom'
                        <input 
                      type='name' 
                      placeholder= 'Name'
-                     className='form-control my-3 p-2'>
+                     className='form-control my-3 p-2'
+                     onChange={(e) => {
+                      setUserName_signUp(e.target.value);
+                    }}
+                     >
                        </input>
 
                        <input 
                      type='dept' 
                      placeholder= 'Dept'
-                     className='form-control my-3 p-2'>
+                     className='form-control my-3 p-2'
+                     onChange={(e) => {
+                      setUserDept_signUp(e.target.value);
+                    }}
+                     >
                        </input> 
 
-                       <input 
-                     type='Reg-no' 
-                     placeholder= 'Reg-No'
-                     className='form-control my-3 p-2'>
-                       </input> 
+
 
                      <input 
                      type='email' 
                      placeholder= 'Email-address'
-                     className='form-control my-3 p-2'>
+                     className='form-control my-3 p-2'
+                     onChange={(e) => {
+                      setUserMail_signUp(e.target.value);
+                    }}
+                     >
                        </input> 
                      
                      <input 
                      type='password' 
                      placeholder= 'password' 
-                     className='form-control my-3 p-2'>
+                     className='form-control my-3 p-2'
+                     onChange={(e) => {
+                      setUserPass_signUp(e.target.value);
+                    }}
+                     >
                        </input> 
                     
                      <button 
                      type='button' 
                      className='signup mt-3 mb-5'
-                     onClick={()=>{navigate("/TeacherQuery");}}
+                     onClick={button}
+                    
                      >
                        SIGN UP
                        </button> 
