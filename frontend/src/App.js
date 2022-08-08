@@ -9,6 +9,8 @@ import StudentQuery from './pages/StudentQuery';
 import Profile from './components/Login_Signup_Profile/Profile';
 import AddEditTeacher from './pages/AddEditTeacher';
 import AddEditCourse from './pages/AddEditCourse';
+import TeacherInformation from './pages/TeacherInformation';
+import CourseInformation from './pages/CourseInformation';
 
 
 
@@ -27,6 +29,8 @@ function App() {
     <Route path='/AddEditStudent' element={<AddEditStudent/>} />
     <Route path='/AddEditTeacher' element={<AddEditTeacher/>} />
     <Route path='/AddEditCourse' element={<AddEditCourse/>} />
+    <Route path='/TeacherInformation' element={<TeacherInformation/>} />
+    <Route path='/CourseInformation' element={<CourseInformation/>} />
    
 
 </Routes>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './genButton.css';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
+const STYLES = ['btn--primary', 'btn--outline', 'btn--test', 'btn--try'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 

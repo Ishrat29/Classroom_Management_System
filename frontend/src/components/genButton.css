@@ -51,6 +51,16 @@
   border: 2px solid;
   width: 672px;
   font-weight: bold;
+}
+
+.btn--try {
+  
+  background-color: #10ac84;
+  color: #fcfafa;
+  border: 2px solid;
+  width: 678px;
+  margin-left: 10px;
+  font-weight: bold;
   
   
 }

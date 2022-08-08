@@ -26,14 +26,14 @@ function QueryCardCollectionGen() {
               <QueryCard src='images/teacher-routine.png '
                 text = "Get Information About A Teacher's Class Schedule"
                 label = "Click Here"
-                path='/'/>
+                path='/TeacherInformation'/>
                 
 
                
               <QueryCard src='images/courses-info.png '
                 text = "Get Information About A Course"
                 label = "Click Here"
-                path='/'/>
+                path='/CourseInformation'/>
                
             </ul>
           </div>

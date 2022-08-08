@@ -36,7 +36,7 @@ import Axios from 'axios'
    return (
     <>
   
-      <title> page</title>
+      <title>SignUp page</title>
           <head></head>
              <body>
                  <div>
