@@ -138,6 +138,14 @@ app.put("/updatestu", (req, res) => {
 const teacherRouter = require('./routes/teacher');
 app.use('/teacher', teacherRouter);
 
-//router to teacher.js
+//router to Course.js
 const courseRouter = require('./routes/Course');
 app.use('/Course', courseRouter);
+
+//router to building.js
+const buildingRouter = require('./routes/building');
+app.use('/building', buildingRouter);
+
+//router to room.js
+const roomRouter = require('./routes/room');
+app.use('/room', roomRouter);

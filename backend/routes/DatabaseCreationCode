@@ -1,0 +1,152 @@
+CREATE SCHEMA `classroom-management-system` ;
+
+CREATE TABLE building(
+   name VARCHAR(100),
+   no_of_rooms INT,
+   PRIMARY KEY(name)
+);
+
+CREATE TABLE department(
+   department_code VARCHAR(30),
+   name VARCHAR(300),
+   building VARCHAR(100),
+   PRIMARY KEY(department_code)
+);
+
+CREATE TABLE student(
+   registration_no VARCHAR(50),
+   name VARCHAR(50),
+   session INT,
+   department VARCHAR(30),
+   PRIMARY KEY(registration_no)
+);
+
+CREATE TABLE teacher(
+   e_mail VARCHAR(74),
+   name VARCHAR(50),
+   mobile VARCHAR(13),
+   department VARCHAR(30),
+   PRIMARY KEY(e_mail)
+);
+
+CREATE TABLE course(
+  course_code VARCHAR(50),
+  course_title VARCHAR(100),
+  primary_teacher VARCHAR(50),
+  secondary_teacher VARCHAR(50),
+  department VARCHAR(30),
+  class_representative1 VARCHAR(50),
+  class_representative2 VARCHAR(50),
+  PRIMARY KEY(course_code)
+);
+
+CREATE TABLE room(
+  room_no VARCHAR(10),
+  building VARCHAR(100),
+  floor VARCHAR(2),
+  sunday_8 VARCHAR(50),
+  sunday_8_temp VARCHAR(50),
+  sunday_9 VARCHAR(50),
+  sunday_9_temp VARCHAR(50),
+  sunday_10 VARCHAR(50),
+  sunday_10_temp VARCHAR(50),
+  sunday_11 VARCHAR(50),
+  sunday_11_temp VARCHAR(50),
+  sunday_12 VARCHAR(50),
+  sunday_12_temp VARCHAR(50),
+  sunday_13 VARCHAR(50),
+  sunday_13_temp VARCHAR(50),
+  sunday_14 VARCHAR(50),
+  sunday_14_temp VARCHAR(50),
+  sunday_15 VARCHAR(50),
+  sunday_15_temp VARCHAR(50),
+  sunday_16 VARCHAR(50),
+  sunday_16_temp VARCHAR(50),
+  sunday_17 VARCHAR(50),
+  sunday_17_temp VARCHAR(50),
+  monday_8 VARCHAR(50),
+  monday_8_temp VARCHAR(50),
+  monday_9 VARCHAR(50),
+  monday_9_temp VARCHAR(50),
+  monday_10 VARCHAR(50),
+  monday_10_temp VARCHAR(50),
+  monday_11 VARCHAR(50),
+  monday_11_temp VARCHAR(50),
+  monday_12 VARCHAR(50),
+  monday_12_temp VARCHAR(50),
+  monday_13 VARCHAR(50),
+  monday_13_temp VARCHAR(50),
+  monday_14 VARCHAR(50),
+  monday_14_temp VARCHAR(50),
+  monday_15 VARCHAR(50),
+  monday_15_temp VARCHAR(50),
+  monday_16 VARCHAR(50),
+  monday_16_temp VARCHAR(50),
+  monday_17 VARCHAR(50),
+  monday_17_temp VARCHAR(50),
+  tuesday_8 VARCHAR(50),
+  tuesday_8_temp VARCHAR(50),
+  tuesday_9 VARCHAR(50),
+  tuesday_9_temp VARCHAR(50),
+  tuesday_10 VARCHAR(50),
+  tuesday_10_temp VARCHAR(50),
+  tuesday_11 VARCHAR(50),
+  tuesday_11_temp VARCHAR(50),
+  tuesday_12 VARCHAR(50),
+  tuesday_12_temp VARCHAR(50),
+  tuesday_13 VARCHAR(50),
+  tuesday_13_temp VARCHAR(50),
+  tuesday_14 VARCHAR(50),
+  tuesday_14_temp VARCHAR(50),
+  tuesday_15 VARCHAR(50),
+  tuesday_15_temp VARCHAR(50),
+  tuesday_16 VARCHAR(50),
+  tuesday_16_temp VARCHAR(50),
+  tuesday_17 VARCHAR(50),
+  tuesday_17_temp VARCHAR(50),
+  wednesday_8 VARCHAR(50),
+  wednesday_8_temp VARCHAR(50),
+  wednesday_9 VARCHAR(50),
+  wednesday_9_temp VARCHAR(50),
+  wednesday_10 VARCHAR(50),
+  wednesday_10_temp VARCHAR(50),
+  wednesday_11 VARCHAR(50),
+  wednesday_11_temp VARCHAR(50),
+  wednesday_12 VARCHAR(50),
+  wednesday_12_temp VARCHAR(50),
+  wednesday_13 VARCHAR(50),
+  wednesday_13_temp VARCHAR(50),
+  wednesday_14 VARCHAR(50),
+  wednesday_14_temp VARCHAR(50),
+  wednesday_15 VARCHAR(50),
+  wednesday_15_temp VARCHAR(50),
+  wednesday_16 VARCHAR(50),
+  wednesday_16_temp VARCHAR(50),
+  wednesday_17 VARCHAR(50),
+  wednesday_17_temp VARCHAR(50),
+  thursday_8 VARCHAR(50),
+  thursday_8_temp VARCHAR(50),
+  thursday_9 VARCHAR(50),
+  thursday_9_temp VARCHAR(50),
+  thursday_10 VARCHAR(50),
+  thursday_10_temp VARCHAR(50),
+  thursday_11 VARCHAR(50),
+  thursday_11_temp VARCHAR(50),
+  thursday_12 VARCHAR(50),
+  thursday_12_temp VARCHAR(50),
+  thursday_13 VARCHAR(50),
+  thursday_13_temp VARCHAR(50),
+  thursday_14 VARCHAR(50),
+  thursday_14_temp VARCHAR(50),
+  thursday_15 VARCHAR(50),coursecourse
+  thursday_15_temp VARCHAR(50),
+  thursday_16 VARCHAR(50),
+  thursday_16_temp VARCHAR(50),
+  thursday_17 VARCHAR(50),
+  thursday_17_temp VARCHAR(50),
+  PRIMARY KEY(room_no,building)
+);
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+Drop table room;

@@ -1,0 +1,78 @@
+:root{
+    --top-height: 10%;
+    --left-width: 100%;
+    --right-width: 100%;
+    --bottom-height: 90%;
+}
+
+.table-wrap{
+    width: fit-content;
+    height: fit-content;
+}
+
+.table-outlay{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    width: 120px;
+    height: 134px;
+}
+
+.table-left{
+    width: var(--left-width);
+}
+
+.table-right{
+    width: var(--right-width);
+}
+
+.table-left-title{
+    background: rgb(2,0,36);
+    background: linear-gradient(16deg, rgba(2,0,36,1) 0%, rgba(9,121,90,1) 0%, rgba(0,212,255,1) 100%);
+
+    writing-mode: vertical-lr;
+    text-align: center;
+    text-orientation: upright;
+    font-size: xx-small;
+
+    height: 120px;
+    
+    
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.table-left-dummy{
+    height: var(--top-height);
+}
+
+.table-right-title{
+    background: rgb(85,24,190);
+    background: linear-gradient(16deg, rgba(85,24,190,0.40940126050420167) 0%, rgba(160,160,163,1) 0%, rgba(228,236,237,1) 100%);
+    height: var(--top-height);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    font-size: xx-small;
+    text-align: center;
+}
+
+.table-course-code{
+    height: 24px;
+    font-size: small;
+    background: rgb(85,24,190);
+    background: linear-gradient(16deg, rgba(85,24,190,0.40940126050420167) 0%, rgba(212,212,212,1) 0%, rgba(189,189,189,1) 100%);
+}
+
+.table-corse-title{
+    height: 72px;
+    font-size: small;
+    text-align: center;
+    background: white;
+}
+
+.table-course-teacher{
+    height: 24px;
+    font-size: xx-small;
+    background: rgb(85,24,190);
+    background: linear-gradient(16deg, rgba(85,24,190,0.40940126050420167) 0%, rgba(212,212,212,1) 0%, rgba(189,189,189,1) 100%);
+}

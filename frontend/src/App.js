@@ -9,6 +9,8 @@ import StudentQuery from './pages/StudentQuery';
 import Profile from './components/Login_Signup_Profile/Profile';
 import AddEditTeacher from './pages/AddEditTeacher';
 import AddEditCourse from './pages/AddEditCourse';
+import AddEditRoom from './pages/AddEditRoom';
+
 
 
 
@@ -27,6 +29,7 @@ function App() {
     <Route path='/AddEditStudent' element={<AddEditStudent/>} />
     <Route path='/AddEditTeacher' element={<AddEditTeacher/>} />
     <Route path='/AddEditCourse' element={<AddEditCourse/>} />
+    <Route path='/AddEditRoom' element={<AddEditRoom/>} />
    
 
 </Routes>
