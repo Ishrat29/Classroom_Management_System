@@ -42,7 +42,7 @@ router.post("/createcourse", (req, res) => {
     const CRreg2 = req.body.CRreg2;
   
     db.query(
-      "INSERT INTO course (course_code, course_title, department, primary_teacher, secondary_teacher, class_representative1, class_representative2 ) VALUES (?,?,?,?,?,?,?)",
+      "INSERT INTO course (course_code, course_title, department, primary_teacher, secondary_teacher, class_representative1, class_representative2 ) VALUES (?,?,?,?)",
       [courseCode, courseTitle, department, PrimaryTeacher, SecondaryTeacher, CRreg, CRreg2],
       (err, result) => {
         if (err) {

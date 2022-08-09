@@ -38,7 +38,7 @@ app.post("/studentinfo", (req, res) => {
 
   app.post("/courseinfo", (req, res) => {
     const courseCode = req.body.courseCode;
-    console.log(courseCode);
+    console.log("requested course info about: "+courseCode);
   
     db.query(
       "SELECT * FROM course WHERE course_code = ?",

@@ -236,7 +236,7 @@ function AddEditCourse() {
         deptbuilding: DeptB,
       }).then((response) => {
         if(response.data.err===0){
-          setBtnErrMessage("Updated Department Info");
+          setBtnErrMessage("Updated!");
           setBtnErrClassName("feedback-btn-err-message");
           if(isValidCourseCode===2&&isValidDept===2&&isValidCourseTitle===2&&isValidCourseCode===2
             &&isValidPrimaryTeacher===2&&isValidSecondaryTeacher===2&&isValidCRreg===2&&isValidCRreg2===2){
@@ -250,7 +250,7 @@ function AddEditCourse() {
               CRreg2: CRreg2,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Department And Course Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -268,7 +268,7 @@ function AddEditCourse() {
               CRreg2: CRreg2,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Department And Course Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -276,7 +276,7 @@ function AddEditCourse() {
           }
         }else{
           setBtnErrClassName("invalid-btn-err");
-          setBtnErrMessage("Could not update department and Course Info")
+          setBtnErrMessage("Failed!")
           return;
         }
 
@@ -294,7 +294,7 @@ function AddEditCourse() {
           CRreg2: CRreg2,
             }).then((response) => {
               if(response.data.err===0){
-                setBtnErrMessage("Updated Course Info");
+                setBtnErrMessage("Updated!");
                 setBtnErrClassName("feedback-btn-err-message");
           
               }
@@ -312,7 +312,7 @@ function AddEditCourse() {
           CRreg2: CRreg2,
         }).then((response) => {
           if(response.data.err===0){
-            setBtnErrMessage("Updated Course Info");
+            setBtnErrMessage("Updated!");
             setBtnErrClassName("feedback-btn-err-message");
       
           }
@@ -349,14 +349,17 @@ function AddEditCourse() {
                    <FormElement labelName="Class Representative's registration (2)" validState={isValidCRreg2} invalidMessage={invalidMessageCRreg2} inputType="Text" onChangeFunc={onCRreg2Change}
                   text={isValidCourseCode===4?course.CRreg2:""}/>  
                  
-                <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
-                  {isValidCourseCode===4?"Update Course Info":"Add Course Info"}
-                </GenButton> 
+                  <div className='b-div'>{/*edit starts here*/}
+                          <GenButton buttonStyle="btn--test" onClick={onBtnClick} >
+                            {isValidCourseCode===4?"Update Course Info":"Add Course Info"}
+                          </GenButton>
+                          <div className={btnErrClassName}>
+                            {btnErrMessage}
+                          </div>
+                          </div>
               </div> 
             </form>
-            <div className={btnErrClassName}>
-              {btnErrMessage}
-            </div>
+            
           </div>
         </div>
     </>
