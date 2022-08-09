@@ -121,35 +121,40 @@ const imageMimeType = /image\/(png|jpg|jpeg)/i;
                       </h3> 
                      <Form>
                      
+                     <div>
+                     <h5 className='h-tag'>Name</h5>
                      <input 
                      type='Name' 
-                     placeholder= 'Name'
+                     placeholder= 'Ishita Akhtar'
                      className='form-control my-3 p-3'>
-                       </input> 
-
+                       </input> </div>
+                       <div>
+                     <h5 className='h-tag'>Dept</h5>
                        <input 
                      type='Dept' 
-                     placeholder= 'Dept'
+                     placeholder= 'CSE'
                      className='form-control my-3 p-3'>
-                       </input>    
+                       </input> </div>   
                     
-                     <input 
+                     {/* <input 
                      type='Reg-No' 
                      placeholder= 'Reg-No' 
                      className='form-control my-3 p-3'>
-                       </input> 
-
+                       </input>  */}
+                       <div>
+                     <h5 className='h-tag'>Session</h5>
                        <input 
                      type='Session' 
-                     placeholder= 'Session'
+                     placeholder= '2010-2011'
                      className='form-control my-3 p-3'>
-                       </input>  
-
+                       </input>  </div>
+                       <div>
+                     <h5 className='h-tag'>Email</h5>
                         <input 
                      type='Email-address' 
-                     placeholder= 'Email-address' 
+                     placeholder= 'ish123@sust.edu' 
                      className='form-control my-3 p-3'>
-                       </input>  
+                       </input>  </div>
                     
                      <button 
                      type='button' 
