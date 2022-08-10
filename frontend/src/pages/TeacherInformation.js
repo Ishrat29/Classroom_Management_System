@@ -27,7 +27,7 @@ function TeacherInformation() {
                       
                      {show &&  
                      <div>
-                     <h5 className='design'>Course</h5> 
+                     <h5 className='design'>Course Code</h5> 
                      <input 
                      type='course' 
                      labelName="Course"
@@ -37,16 +37,27 @@ function TeacherInformation() {
                        </input> </div>}
                       
 
-                       {show &&   
+                     {show &&   
                      <div>
                      <h5 className='design'>Room</h5>  
                     <input 
                      type='Room' 
                      labelName="room"
-                     placeholder= '301, IICT'
+                     placeholder= '301'
                      className='design'
                      >
                        </input> </div>}
+
+                       {show &&   
+                     <div>
+                     <h5 className='design'>Building</h5>  
+                    <input 
+                     type='Room' 
+                     labelName="room"
+                     placeholder= 'IICT'
+                     className='design'
+                     >
+                       </input> </div>}   
 
                        {show2 &&  
                        <div>
@@ -65,10 +76,21 @@ function TeacherInformation() {
                        <input 
                      type='Room' 
                      labelName="room"
-                     placeholder= "Teacher's room"
+                     placeholder= "-"
                      className='design'
                      >
                        </input> </div>}
+
+                       {show2 &&   
+                       <div>
+                       <h5 className='design'>Building</h5>  
+                       <input 
+                     type='Room' 
+                     labelName="room"
+                     placeholder= "-"
+                     className='design'
+                     >
+                       </input> </div>}  
 
     
                       {move &&  <GenButton 

@@ -14,7 +14,7 @@ function QUeryCollectionAdv() {
           <div className='cards__wrapper'>
             <ul className='cards__items'>
                
-           
+             
               <QueryCard hoverable
                 src='images/add-edit-course.png'
                 text = 'Add Or Edit A Course'
@@ -28,12 +28,22 @@ function QUeryCollectionAdv() {
                 label = "Click Here"
                 path='/AddEditTeacher'
                 />
+                
                
               <QueryCard src='images/add-edit-student.png'
                 text = "Add Or Edit A Student's Information"
                  label = "Click Here"
                  path='/AddEditStudent'
-                />
+                /> 
+
+              
+              <QueryCard src='images/Room.jpg'
+                text = "Add Or Edit Room Information"
+                 label = "Click Here"
+                 path='/AddEditRoom'
+                />  
+              
+                
             </ul>
           </div>
         </div>

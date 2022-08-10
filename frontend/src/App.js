@@ -33,6 +33,7 @@ function App() {
     <Route path='/AddEditRoom' element={<AddEditRoom/>} />
     <Route path='/TeacherInformation' element={<TeacherInformation/>} />
     <Route path='/CourseInformation' element={<CourseInformation/>} />
+    
    
 
 </Routes>
