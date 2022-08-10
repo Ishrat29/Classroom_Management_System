@@ -1,5 +1,15 @@
 CREATE SCHEMA `classroom-management-system` ;
 
+
+CREATE TABLE user(
+ user_name VARCHAR(50),
+ user_dept VARCHAR(50),
+ user_mail VARCHAR(74),
+ user_pass VARCHAR(20),
+ PRIMARY KEY(user_mail)
+);
+
+
 CREATE TABLE building(
    name VARCHAR(100),
    no_of_rooms INT,
@@ -39,6 +49,8 @@ CREATE TABLE course(
   class_representative2 VARCHAR(50),
   PRIMARY KEY(course_code)
 );
+
+
 
 CREATE TABLE room(
   room_no VARCHAR(10),

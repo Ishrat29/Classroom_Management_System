@@ -48,18 +48,29 @@ function CourseInformation() {
                      <input 
                      type='Teacher' 
                      labelName="Course-Teacher"
-                     placeholder= 'Mridul Sir'
+                     placeholder= 'Maruf Ahmed Mridul'
                      className='design'
                      >
                        </input> </div>}   
-
+{/* 
                     {show &&  
                      <div>
                      <h5 className='design'>Room</h5> 
                      <input 
                      type='room' 
                      labelName="Room"
-                     placeholder= 'Gallary-2, IICT'
+                     placeholder= '329'
+                     className='design'
+                     >
+                       </input> </div>} */}
+
+                    {show &&  
+                     <div>
+                     <h5 className='design'>Building</h5> 
+                     <input 
+                     type='room' 
+                     labelName="Room"
+                     placeholder= 'IICT'
                      className='design'
                      >
                        </input> </div>}
