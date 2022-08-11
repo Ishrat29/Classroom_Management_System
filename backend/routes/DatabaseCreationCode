@@ -150,7 +150,7 @@ CREATE TABLE room(
   thursday_13_temp VARCHAR(50),
   thursday_14 VARCHAR(50),
   thursday_14_temp VARCHAR(50),
-  thursday_15 VARCHAR(50),coursecourse
+  thursday_15 VARCHAR(50),
   thursday_15_temp VARCHAR(50),
   thursday_16 VARCHAR(50),
   thursday_16_temp VARCHAR(50),
@@ -160,5 +160,3 @@ CREATE TABLE room(
 );
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
-
-Drop table room;

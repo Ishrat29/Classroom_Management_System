@@ -43,6 +43,7 @@
 
 .table-left-dummy{
     height: var(--top-height);
+    font-size: 5px;
 }
 
 .table-right-title{

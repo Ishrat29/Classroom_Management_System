@@ -54,3 +54,28 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     padding-bottom: 5px;
 }
+
+.valid-btn-err {
+    display: none;
+}
+
+.invalid-btn-err {
+    width: fit-content;
+    height: 35px;
+    margin-top: 0.25rem;
+    font-size: 30px;
+    color: #dc3545;
+}
+
+.feedback-btn-err-message {
+    width: fit-content;
+    height: 35px;
+    margin-top: 0.25rem;
+    font-size: 30px;
+    color: #10ac84;
+    align-items: center;
+}
+
+.table-vis-none{
+    display: none;
+}
