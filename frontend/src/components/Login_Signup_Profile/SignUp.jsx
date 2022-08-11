@@ -84,6 +84,16 @@ import Axios from 'axios'
                      >
                        </input> 
 
+                       <input 
+                     type='session' 
+                     placeholder= 'Session'
+                     className='form-control my-3 p-2'
+                     onChange={(e) => {
+                      setUserDept_signUp(e.target.value);
+                    }}
+                     >
+                       </input> 
+
 
 
                      <input 
