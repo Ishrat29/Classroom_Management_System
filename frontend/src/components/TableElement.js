@@ -7,11 +7,12 @@ function TableElement(props) {
 
   return (
     <>
-      <div className='table-wrap' onClick={(e)=>{props.onC(e,props.keyInfo)}}>
+      <div className='table-wrap' onClick={(e)=>{
+        props.onC(e,props.keyInfo);}}>
         <div className='table-outlay'>
           <div className='table-left'>
             <div className='table-left-dummy'>
-
+              {props.ranNum}
             </div>
             <div className='table-left-title'>
               {props.day.toUpperCase()}

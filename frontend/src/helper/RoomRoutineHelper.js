@@ -1,4 +1,5 @@
 export function roomRoutineToCourseCode(roomRoutine){
+    console.log("RoomRoutineHelper: RoomroutinrToCourseCode:"+roomRoutine)
     let reqInd= roomRoutine.indexOf('|');
     if(reqInd!=0) return roomRoutine.substring(0,reqInd);
     else return "";
@@ -16,7 +17,10 @@ export function isValidDate(date){
 }
 
 export function roomRoutineToDate(roomRoutine){
-    return parseInt(roomRoutine.substring(roomRoutine.indexOf('|')+2));
+    const inds = roomRoutine.indexOf('|')+2;
+    const res = parseInt(roomRoutine.substring(inds));
+    if(isNaN(res)===true) return 0;
+    return res;
 }
 
 export function  isNeedUpdateRoomRoutineTempPair(roomRoutine,roomRoutineTemp){
