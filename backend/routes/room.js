@@ -523,5 +523,24 @@ router.put("/update", (req, res) => {
   );
 });
 
+router.post("/queryVacant", (req, res) => {
+  const date = req.body.date;
+  const dateTemp = req.body.dateTemp;
+  console.log('Room Query Vacant request with: '+date+' '+dateTemp);
+
+  db.query(
+    "SELECT * FROM room WHERE "+date+" LIKE '|%' OR "+dateTemp+" LIKE '|y%';",
+    [date, dateTemp],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+        console.log("Rooms Query Successful!");
+      }
+    }
+  );
+});
+
 
 module.exports = router

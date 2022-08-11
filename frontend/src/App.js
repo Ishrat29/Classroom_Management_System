@@ -12,6 +12,7 @@ import AddEditCourse from './pages/AddEditCourse';
 import AddEditRoom from './pages/AddEditRoom';
 import TeacherInformation from './pages/TeacherInformation';
 import CourseInformation from './pages/CourseInformation';
+import RoomQuery from './pages/RoomQuery';
 
 
 
@@ -33,7 +34,7 @@ function App() {
     <Route path='/AddEditRoom' element={<AddEditRoom/>} />
     <Route path='/TeacherInformation' element={<TeacherInformation/>} />
     <Route path='/CourseInformation' element={<CourseInformation/>} />
-    
+    <Route path='/RoomQuery' element={<RoomQuery/>} />
    
 
 </Routes>
