@@ -18,7 +18,7 @@ function QueryCardCollectionGen() {
               <QueryCard src='images/classroom-info.png '
                 text = 'Get Information About A Room'
                  label = 'Click here'
-                 path='/'
+                 path='/RoomQuery'
                 />
                 
 
