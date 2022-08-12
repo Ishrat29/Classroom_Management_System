@@ -91,7 +91,7 @@ function RoomQuery() {
             setEditAfterFound(0);
             window.location.reload();
           }
-          setInvalidMessageRoom("Corresponding room exists in the Database");
+          setInvalidMessageRoom(".");
           setIsValidRoom(4);
           setRoom(response.data[0]);
           console.log(response.data[0]);
@@ -884,7 +884,7 @@ function RoomQuery() {
         <GenNavbar/>
         <div className='page-wrap'>
            <div className="col-md-7 col-lg-8">
-              <h4 className="mb-3">Room Information Query</h4>
+              <h4 className="mb-3">Room Information</h4>
               <GenButton buttonStyle="btn--test" onClick={onRoutineBtnClick} >
                     {"Get Full Routine of a Room"}
               </GenButton>

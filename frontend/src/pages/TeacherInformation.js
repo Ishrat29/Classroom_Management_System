@@ -23,7 +23,8 @@ function TeacherInformation() {
                         <FormElement labelName="Teacher's E-mail" inputType="Text" text=""/>
                         <FormElement labelName="Teacher's Name" inputType="Text" text=""/>
                         <FormElement labelName="Teacher's Dept" inputType="Text" text=""/>
-                        <FormElement labelName="Time" inputType="number" placeholder= 'CSE101' text=""/>
+                        <FormElement labelName="Time" inputType="number"  text=""/>
+                        <FormElement labelName="Day" inputType="Text"  text=""/>
                       
                      {show &&  
                      <div>
@@ -31,7 +32,7 @@ function TeacherInformation() {
                      <input 
                      type='course' 
                      labelName="Course"
-                     placeholder= 'CSE101'
+                     placeholder= 'CSE435'
                      className='design'
                      >
                        </input> </div>}
@@ -43,7 +44,7 @@ function TeacherInformation() {
                     <input 
                      type='Room' 
                      labelName="room"
-                     placeholder= '301'
+                     placeholder= '329'
                      className='design'
                      >
                        </input> </div>}
